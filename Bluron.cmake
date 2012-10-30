@@ -1,4 +1,4 @@
-set(BLURON_VERSION 7.3)
+set(BLURON_PACKAGE_VERSION 7.3)
 set(BLURON_REPO_URL https://github.com/BlueBrain/Bluron.git)
 set(BLURON_REPO_TAG master)
 set(BLURON_SOURCE "${CMAKE_SOURCE_DIR}/src/nrn")

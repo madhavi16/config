@@ -1,5 +1,5 @@
 
-set(HDF5_VERSION 1.8)
+set(HDF5_PACKAGE_VERSION 1.8)
 set(HDF5_REPO_URL https://github.com/BlueBrain/HDF5.git)
 set(HDF5_SOURCE "${CMAKE_SOURCE_DIR}/src/hdf5")
 set(HDF5_OPTIONAL ON)
