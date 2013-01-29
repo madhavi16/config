@@ -15,5 +15,5 @@ endif()
 set(SAGE_EXTRA
   CONFIGURE_COMMAND ${_sage_configure_cmd}
   BUILD_COMMAND cd ${SAGE_SOURCE} && make -f Makefile
-  INSTALL_COMMAND cd ${SAGE_SOURCE} && make -f Makefile PREFIX="${CMAKE_CURRENT_BINARY_DIR}/install" install
+  INSTALL_COMMAND cd ${SAGE_SOURCE} && make -f Makefile PREFIX="${CMAKE_CURRENT_BINARY_DIR}/install/sage" install
 )
