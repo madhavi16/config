@@ -1,13 +1,13 @@
 
-set(SAGE_IMAGEMAGICK_COMPONENTS "MagickWand MagickCore")
-
 set(SAGE_PACKAGE_VERSION 3.0)
 set(SAGE_REPO_URL https://github.com/BlueBrain/SAGE.git)
 set(SAGE_REPO_TAG bbp)
 set(SAGE_SOURCE "${CMAKE_SOURCE_DIR}/src/SAGE")
 set(SAGE_NOTEST ON)
 set(SAGE_OPTIONAL ON)
-set(SAGE_DEPENDS REQUIRED SDL SDL_ttf ImageMagick GLUT vncserver jack lo)
+set(SAGE_DEPENDS REQUIRED SDL SDL_ttf ImageMagick GLUT vncserver jack lo v4l2
+  yasm)
+set(SAGE_IMAGEMAGICK_COMPONENTS "MagickWand MagickCore")
 
 find_package(SDL_ttf)
 if(SDLTTF_FOUND)
@@ -24,6 +24,6 @@ file(WRITE ${_sage_configure_cmd}
 
 set(SAGE_EXTRA
   CONFIGURE_COMMAND ${CMAKE_COMMAND} -P ${_sage_configure_cmd}
-  BUILD_COMMAND cd ${SAGE_SOURCE} && make -f Makefile
-  INSTALL_COMMAND cd ${SAGE_SOURCE} && make -f Makefile PREFIX="${CMAKE_CURRENT_BINARY_DIR}/install/sage" install
+  BUILD_COMMAND make -C ${SAGE_SOURCE} -f Makefile
+  INSTALL_COMMAND make -C ${SAGE_SOURCE} -f Makefile PREFIX="${CMAKE_CURRENT_BINARY_DIR}/install/sage" install
 )
