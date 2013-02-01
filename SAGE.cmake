@@ -1,10 +1,18 @@
 
+set(SAGE_IMAGEMAGICK_COMPONENTS "MagickWand MagickCore")
+
 set(SAGE_PACKAGE_VERSION 3.0)
 set(SAGE_REPO_URL https://github.com/BlueBrain/SAGE.git)
 set(SAGE_REPO_TAG bbp)
 set(SAGE_SOURCE "${CMAKE_SOURCE_DIR}/src/SAGE")
 set(SAGE_NOTEST ON)
 set(SAGE_OPTIONAL ON)
+set(SAGE_DEPENDS REQUIRED SDL SDL_ttf ImageMagick GLUT vncserver jack lo)
+
+find_package(SDL_ttf)
+if(SDLTTF_FOUND)
+  set(SDL_TTF_FOUND 1)
+endif()
 
 set(_sage_configure_cmd ${CMAKE_BINARY_DIR}/SAGE/_sage_configure_cmd.cmake)
 file(WRITE ${_sage_configure_cmd}
