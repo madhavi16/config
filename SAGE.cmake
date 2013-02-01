@@ -14,16 +14,8 @@ if(SDLTTF_FOUND)
   set(SDL_TTF_FOUND 1)
 endif()
 
-set(_sage_configure_cmd ${CMAKE_BINARY_DIR}/SAGE/_sage_configure_cmd.cmake)
-file(WRITE ${_sage_configure_cmd}
-  "if(NOT EXISTS ${CMAKE_BINARY_DIR}/SAGE/config.status)\n
-    execute_process(COMMAND ./configure WORKING_DIRECTORY ${SAGE_SOURCE})\n
-    execute_process(COMMAND ${CMAKE_COMMAND} -E touch config.status WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/SAGE)\n
-   endif()\n"
-)
-
 set(SAGE_EXTRA
-  CONFIGURE_COMMAND ${CMAKE_COMMAND} -P ${_sage_configure_cmd}
+  CONFIGURE_COMMAND ${CMAKE_COMMAND} -P SAGE_configure_cmd.cmake
   BUILD_COMMAND make -C ${SAGE_SOURCE} -f Makefile
   INSTALL_COMMAND make -C ${SAGE_SOURCE} -f Makefile PREFIX="${CMAKE_CURRENT_BINARY_DIR}/install/sage" install
 )
