@@ -5,8 +5,12 @@ set(SAGE_REPO_TAG bbp)
 set(SAGE_SOURCE "${CMAKE_SOURCE_DIR}/src/SAGE")
 set(SAGE_NOTEST ON)
 set(SAGE_OPTIONAL ON)
-set(SAGE_DEPENDS REQUIRED SDL SDL_ttf ImageMagick GLUT vncserver jack lo v4l2
-  yasm)
+if(LSB_DISTRIBUTOR_ID MATCHES "RedHatEnterpriseServer")
+  set(SAGE_DEPENDS REQUIRED SDL SDL_ttf ImageMagick GLUT jack lo v4l2 yasm)
+else()
+  set(SAGE_DEPENDS REQUIRED SDL SDL_ttf ImageMagick GLUT vncserver jack lo v4l2
+    yasm)
+endif()
 set(SAGE_IMAGEMAGICK_COMPONENTS "MagickWand MagickCore")
 
 find_package(SDL_ttf)
