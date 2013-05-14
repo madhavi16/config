@@ -1,0 +1,5 @@
+set(TUIO_PACKAGE_VERSION 1.4)
+set(TUIO_DEPENDS GLUT OpenGL SDL)
+set(TUIO_REPO_URL https://github.com/BlueBrain/TUIO.git)
+set(TUIO_NOTEST ON)
+set(TUIO_OPTIONAL ON)
