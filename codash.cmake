@@ -6,4 +6,4 @@ set(CODASH_REPO_TAG master)
 set(CODASH_BOOST_COMPONENTS "program_options serialization")
 set(CODASH_DEB_DEPENDS libboost-program-options-dev libboost-serialization-dev)
 set(CODASH_SOURCE "${CMAKE_SOURCE_DIR}/src/codash")
-
+set(CODASH_FORCE_BUILD ${CI_BUILD})
