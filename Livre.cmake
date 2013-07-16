@@ -1,4 +1,4 @@
-if(WIN32)
+if(WIN32 OR APPLE)
   return()
 endif()
 set(LIVRE_PACKAGE_VERSION 1.0.0)
