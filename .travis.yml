@@ -11,5 +11,5 @@ script:
  - git clone --depth 10 https://github.com/Eyescale/Buildyard.git
  - cd Buildyard
  - mkdir config.travis
- - cp -a ../*.cmake ../depends.tx? config.travis
+ - cp ../*.* config.travis
  - env TRAVIS=1 make tests
