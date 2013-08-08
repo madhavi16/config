@@ -1,7 +1,11 @@
 set(TUVOK_VERSION   1.0.0)
-set(TUVOK_REPO_URL  https://github.com/BlueBrain/Tuvok.git)
 set(TUVOK_REPO_TAG  bbp)
 set(TUVOK_NOTEST    ON)
 set(TUVOK_OPTIONAL  ON)
 set(TUVOK_DEPENDS   REQUIRED ZLIB Qt4 BISON FLEX)
 set(TUVOK_QT4_COMPONENTS "QtCore QtGui QtXml QtOpenGL")
+
+include(TestCPP11)
+if( CPP11_AUTO_SUPPORTED AND CPP11_STDSHAREDPTR_SUPPORTED AND CPP11_TUPLE_SUPPORTED )
+   set(TUVOK_REPO_URL  https://github.com/BlueBrain/Tuvok.git)
+endif()
