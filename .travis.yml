@@ -12,4 +12,5 @@ script:
  - cd Buildyard
  - mkdir config.travis
  - cp ../*.* config.travis
+ - env TRAVIS=1 make -j8 debug release
  - env TRAVIS=1 make tests
