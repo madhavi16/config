@@ -6,7 +6,52 @@ language: cpp
 # compiler: clang
 before_install:
  - sudo apt-get update -qq
- - sudo apt-get install -qq autoconf automake bison cmake flex freeglut3-dev git git-review git-svn libass-dev libavahi-compat-libdnssd-dev libavcodec-dev libavdevice-dev libavformat-dev libavutil-dev libboost-date-time-dev libboost-program-options-dev libboost-regex-dev libboost-serialization-dev libboost-system-dev libgl1-mesa-dev libglewmx1.6-dev libhdf5-serial-dev libhwloc-dev libibverbs-dev libjpeg-turbo8-dev liblircclient-dev libogre-dev libopenal-dev libopencv-dev libopenmpi-dev libopenscenegraph-dev libqt4-dev librdmacm-dev libspnav-dev libswscale-dev libtclap-dev libturbojpeg libudt-dev libvncserver-dev libvtk5-dev libx11-dev libxmu-dev ninja-build pkg-config subversion  || /bin/true
+ - sudo apt-get install -qq autoconf || /bin/true
+ - sudo apt-get install -qq automake || /bin/true
+ - sudo apt-get install -qq bison || /bin/true
+ - sudo apt-get install -qq cmake || /bin/true
+ - sudo apt-get install -qq flex || /bin/true
+ - sudo apt-get install -qq freeglut3-dev || /bin/true
+ - sudo apt-get install -qq git || /bin/true
+ - sudo apt-get install -qq git-review || /bin/true
+ - sudo apt-get install -qq git-svn || /bin/true
+ - sudo apt-get install -qq libass-dev || /bin/true
+ - sudo apt-get install -qq libavahi-compat-libdnssd-dev || /bin/true
+ - sudo apt-get install -qq libavcodec-dev || /bin/true
+ - sudo apt-get install -qq libavdevice-dev || /bin/true
+ - sudo apt-get install -qq libavformat-dev || /bin/true
+ - sudo apt-get install -qq libavutil-dev || /bin/true
+ - sudo apt-get install -qq libboost-date-time-dev || /bin/true
+ - sudo apt-get install -qq libboost-program-options-dev || /bin/true
+ - sudo apt-get install -qq libboost-regex-dev || /bin/true
+ - sudo apt-get install -qq libboost-serialization-dev || /bin/true
+ - sudo apt-get install -qq libboost-system-dev || /bin/true
+ - sudo apt-get install -qq libgl1-mesa-dev || /bin/true
+ - sudo apt-get install -qq libglewmx1.6-dev || /bin/true
+ - sudo apt-get install -qq libhdf5-serial-dev || /bin/true
+ - sudo apt-get install -qq libhwloc-dev || /bin/true
+ - sudo apt-get install -qq libibverbs-dev || /bin/true
+ - sudo apt-get install -qq libjpeg-turbo8-dev || /bin/true
+ - sudo apt-get install -qq liblircclient-dev || /bin/true
+ - sudo apt-get install -qq libogre-dev || /bin/true
+ - sudo apt-get install -qq libopenal-dev || /bin/true
+ - sudo apt-get install -qq libopencv-dev || /bin/true
+ - sudo apt-get install -qq libopenmpi-dev || /bin/true
+ - sudo apt-get install -qq libopenscenegraph-dev || /bin/true
+ - sudo apt-get install -qq libqt4-dev || /bin/true
+ - sudo apt-get install -qq librdmacm-dev || /bin/true
+ - sudo apt-get install -qq libspnav-dev || /bin/true
+ - sudo apt-get install -qq libswscale-dev || /bin/true
+ - sudo apt-get install -qq libtclap-dev || /bin/true
+ - sudo apt-get install -qq libturbojpeg || /bin/true
+ - sudo apt-get install -qq libudt-dev || /bin/true
+ - sudo apt-get install -qq libvncserver-dev || /bin/true
+ - sudo apt-get install -qq libvtk5-dev || /bin/true
+ - sudo apt-get install -qq libx11-dev || /bin/true
+ - sudo apt-get install -qq libxmu-dev || /bin/true
+ - sudo apt-get install -qq ninja-build || /bin/true
+ - sudo apt-get install -qq pkg-config || /bin/true
+ - sudo apt-get install -qq subversion || /bin/true
 script:
  - git clone --depth 10 https://github.com/Eyescale/Buildyard.git
  - cd Buildyard
