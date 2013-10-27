@@ -10,3 +10,13 @@
 *.lai
 *.la
 *.a
+
+# ignore .swp files
+*.swp
+*~
+
+# ignore cmake files
+CMakeCache.txt
+CMakeFiles/*
+cpp11*
+*.cmake
